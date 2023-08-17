@@ -5,6 +5,8 @@ import { tasksRouter } from "./routes/indexRouter";
 
 const app = express();
 
+const PORT = process.env.PORT || 3001
+
 var serviceAccount = require("../serviceAccountKey.json");
 
 admin.initializeApp({
@@ -16,4 +18,4 @@ app.use(cors());
 
 app.use('/', tasksRouter);
 
-app.listen(3000, () => { console.log('Running XD') });
+app.listen(PORT, () => { console.log('Running XD') });
