@@ -1,11 +1,11 @@
 import express from "express";
 import admin from 'firebase-admin';
-import cors from 'cors'; // Importe o pacote cors
+import cors from 'cors';
 import { tasksRouter } from "./routes/indexRouter";
 
 const app = express();
 
-const PORT = process.env.PORT || 3001
+const PORT = process.env.PORT || 3000
 
 var serviceAccount = require("../serviceAccountKey.json");
 
